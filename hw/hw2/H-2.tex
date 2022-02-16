@@ -5,8 +5,8 @@
 %% UPDATE these variables:
 \renewcommand{\hwnum}{2}
 \title{Computational Topology, Homework \hwnum}
-\author{\todo{your name here}}
-\collab{\todo{list your collaborators here}}
+\author{Rishi Borkar}
+\collab{Braeden Sopp}
 \date{due: 17 February 2022}
 
 \begin{document}
@@ -106,7 +106,19 @@ argument to prove that every planar graph has a vertex 5-coloring.
 Answer HE-CT Part I, Question 7 (Planar Graph Coloring).
 
 \paragraph{Answer}
-\todo{answer here}
+
+\begin{itemize}
+	\item Let  $G$ be a planar graph and $v$ be a vertex with degree $\leq 5$ 
+	\item If deg(v) $\leq 4$, color the neighbours of $v$ with different colors and color $v$ with any thats remaining
+	\item If deg(v) $ = 5$ 
+	\begin{itemize}
+		\item Let the neighbours of $v$ be $v_1,v_2,...v_5$ and the colors assigned to them be $c_1,c_2,...c_5$
+		\item Choose 2 alternate neighbours say $v_1$ and $v_3$ and consider the subgraph of all the vertices colored by their colours $c_1$ and $c_3$
+		\item If the subgraphs of $v_1$ and $v_3$  are disconnected, colors in either of the subgraphs can be switched with each other so that $v_1$ and $v_3$ are both the same color. $v$ can then be colored with the remaining color.
+		\item If the $v_1 - v_3$ subgraphs are connected, apply the same steps on  $v_2$ and $v_4$
+		\item If the $v_2 - v_4$ subgraphs are connected as well, it means that the two subgraphs $v_1 - v_3$ \& $v_2 - v_4$  cross each other, which contradicts the planarity of the graph.		 
+	\end{itemize}
+\end{itemize}
 
 \nextprob{Two-Coloring}
 % \collab{TODO - uncomment if your collaborators on this have changed
@@ -126,7 +138,10 @@ sharing an edge receive the same color.
 Answer HE-CT Part II, Question~$2$~(\emph{$2$-Coloring}).
 
 \paragraph{Answer}
-\todo{answer here}
+
+\begin{itemize}
+	\item 
+\end{itemize}
 
 \nextprob{SoCG}
 % \collab{TODO - uncomment if your collaborators on this have changed
@@ -145,9 +160,8 @@ If you need some inspiration on papers, here are some recommendations:
     \item  Adamaszek, Adams,  Gasparovic, Gommel, Purvine, Sazdanovic,
         Wang, Wang, and Ziegelmeier. Vietoris-Rips and Cech Complexes of Metric
         Gluings. SoCG 2018.
-    \item Amezquita, Quigley, Ophelders, Munch, and Chitwood.
-        Quantifying Barley Morphology using Euler Characteristic Curves. SoCG
-        2020.
+    \item  Amezquita, Quigley, Ophelders, Munch, and Chitwood. Quantifying Barley Morphology using Euler Characteristic Curves. SoCG
+        2020
     \item Chambers and Wang. Measuring Similarity Between Curves on 2-Manifolds
         via Homotopy Area. SoCG 2013.
     \item Driemel, Phillips, and Psarros.
@@ -159,7 +173,14 @@ If you need some inspiration on papers, here are some recommendations:
         Projection. SoCG 2014.
 \end{itemize}
 
-\paragraph{Answer}
-\todo{answer here}
+\paragraph{Answer} 
+ Amezquita, Quigley, Ophelders, Munch, and Chitwood. Quantifying Barley Morphology using Euler Characteristic Curves. SoCG
+        2020 \\
+        
+The paper makes use of Support Vector Machines to classify barley varieties using both traditional data, topological data as well as a combination of the both. The traditional data mainly consists of data based on 11 quantifiable traditional shape descriptors. The topological data 
+
+
+
+
 
 \end{document}
