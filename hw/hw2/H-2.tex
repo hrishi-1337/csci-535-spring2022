@@ -37,7 +37,15 @@ $$\ell_{\infty}(f,g) := \sup_{x \in X} d_Y(f(x),g(x)).$$
     \item Prove that this is a metric.
 
         \paragraph{Answer}
-        \todo{answer here}
+          A function $l_\infty$ : C(X,Y) x C(X,Y) $\to R$ is said to be metric on C(X,Y) if:
+          
+          \begin{itemize}
+          	\item $l_\infty(f, g) \geq 0$ for all f, g $\in C(X,Y)$ : $l_\infty(f, g)$ is the supremum of the distance $d_Y(f(x), g(x))$ for all $x \in X$. And since the distance is never zero, the supremum which is the smallest upperbound of it has to be $\geq 0$          	
+          	\item $l_\infty(f, g) = 0$ if $f =g$ : If both f and g are the same point, the distance between the two points is zero. 
+          	\item $l_\infty(f, g) = l_\infty(g, f)$ for all f, g $\in C(X,Y)$ : The distance between two points in the topological space remains the same no matter which direction it is measured from i.e $f(x) \to g(x)$ or $g(x) \to f(x)$          	
+          	\item $l_\infty(f, g) \leq l_\infty(f, h) + l_\infty(h, g)$ for all f, g, h $\in C(X,Y)$ : If a third point $h$ is introduced, considering the triangle rule, $d_Y(f(x), g(x))$ will always be greater than  $d_Y(f(x), h(x))$ +  $d_Y(h(x), g(x))$ since C(X,Y) are continuous functions from X to Y. 
+          \end{itemize}
+                
 
     \item Suppose the topology on $X$ is the indiscrete topology; that is,
         $\mathcal{T}_X=\{\emptyset,X\}$.  Describe the topological space whose
@@ -46,7 +54,7 @@ $$\ell_{\infty}(f,g) := \sup_{x \in X} d_Y(f(x),g(x)).$$
         topology, please assume that we are using the standard topology).
 
         \paragraph{Answer}
-        \todo{answer here}
+        Since $\mathcal{T}_X=\{\emptyset,X\}$ is an indiscrete(trivial) topology, then $C(X,\R)$ is continuous for any topology in $\R$ because $f^{-1}(\emptyset) = \emptyset$ and $f^{-1}(X) = \R$, both of which are always open in any topology on $\R$.
 
 \end{enumerate}
 
@@ -79,12 +87,21 @@ Prove the following:
 
 \begin{proof}
 
-    \todo{}
-
+  	
+  
 \end{proof}
 
 \nextprob{Planar Graph Coloring}
 % \collab{TODO - uncomment if your collaborators on this have changed
+
+Planar graph coloring (two credits). Recall that every planar graph has
+a vertex of degree at most five. We can use this fact to show that every
+planar graph has a vertex 6-coloring, that is, a coloring of each vertex with
+one of six colors such that any two adjacent vertices have different colors.
+Indeed, after removing a vertex with fewer than six neighbors we use
+induction to 6-color the remaining graph and when we put the vertex back
+we choose a color that differs from the colors of its neighbors. Refine the
+argument to prove that every planar graph has a vertex 5-coloring.
 
 Answer HE-CT Part I, Question 7 (Planar Graph Coloring).
 
@@ -93,6 +110,19 @@ Answer HE-CT Part I, Question 7 (Planar Graph Coloring).
 
 \nextprob{Two-Coloring}
 % \collab{TODO - uncomment if your collaborators on this have changed
+
+2-coloring (two credits). Let K be a triangulation of an orientable 2-
+manifold without boundary. Construct L by decomposing each edge into
+two and each triangle into six. To do this, we add a new vertex in the
+interior of each edge. Similarly, we add a new vertex in the interior of each
+triangle, connecting it to the six vertices in the boundary of the triangle.
+The resulting structure is the same as the barycentric subdivision of K,
+which we will define in Chapter III.
+(i) Show that the vertices of L can be 3-colored such that no two neighboring
+vertices receive the same color.
+(ii) Prove that the triangles of L can be 2-colored such that no two triangles
+sharing an edge receive the same color.
+
 Answer HE-CT Part II, Question~$2$~(\emph{$2$-Coloring}).
 
 \paragraph{Answer}
